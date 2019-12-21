@@ -1,0 +1,81 @@
+@import "evolvable/mixins";
+
+@font-face {
+  font-family: 'trade-gothic-next', sans-serif;
+  font-weight: 700;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'trade-gothic-next', sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'sofia-pro', sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+$black:          #000 !default;
+$white:          #fff !default;
+$gray-600:       #6c757d !default;
+$gray-900:       #212529 !default;
+$e-purple:       #641AFF;
+$e-yellow:       #ffc431;
+$e-slate:        #303650;
+$e-pink:         #f25776;
+$e-navy:         #182E74;
+$brand-color:    $e-purple;
+
+$link-color:                  blue !default;
+$link-decoration:             none !default;
+$link-hover-color:            darken($link-color, 15%) !default;
+$link-hover-decoration:       underline !default;
+
+$font-family-sans-serif:      'sofia-pro', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji" !default;
+$font-family-monospace:       SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace !default;
+$font-family-base:            'sofia-pro', $font-family-sans-serif !default;
+
+$headings-font:              'trade-gothic-next', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji" !default;
+
+$font-size-base:              1rem !default; // Assumes the browser default, typically `16px`
+$font-size-lg:                $font-size-base * 1.25 !default;
+$font-size-sm:                $font-size-base * .875 !default;
+
+$font-weight-base:            400 !default;
+$font-weight-bold:            700 !default;
+$line-height-base:            1.5 !default;
+
+$body-bg:                     $white !default;
+$body-color:                  $gray-900 !default;
+$text-muted:                  $gray-600 !default;
+
+$dt-font-weight:              $font-weight-bold !default;
+
+$spacer: 1rem !default;
+$spacers: () !default;
+// stylelint-disable-next-line scss/dollar-variable-default
+$spacers: map-merge(
+  (
+    0: 0,
+    1: ($spacer * .25),
+    2: ($spacer * .5),
+    3: $spacer,
+    4: ($spacer * 1.5),
+    5: ($spacer * 3)
+  ),
+  $spacers
+);
+
+$headings-margin-bottom:      $spacer / 2 !default;
+$paragraph-margin-bottom:     $spacer;
+
+$table-cell-padding:                .75rem !default;
+$table-caption-color:               $text-muted !default;
+$enable-pointer-cursor-for-buttons: true !default;
+
+$max-w-screen-xl: 960px;
+
+@import "evolvable/reset";
+@import "evolvable/utils";
+@import "evolvable/theme";
